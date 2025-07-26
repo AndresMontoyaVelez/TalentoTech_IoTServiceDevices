@@ -1,0 +1,12 @@
+<!-- templates/account.html -->
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Account</h2>
+  <form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <div>{{ form.username.label }} {{ form.username(size=32) }}</div>
+    <div>{{ form.email.label }} {{ form.email(size=32) }}</div>
+    <div>{{ form.picture.label }} {{ form.picture() }}</div>
+    <div>{{ form.submit() }}</div>
+  </form>
+{% endblock %}

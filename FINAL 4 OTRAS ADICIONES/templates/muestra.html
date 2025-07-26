@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel Clientes</title>
+  <style>
+    :root {
+      --morado-claro: #d8c4f0;
+      --naranja-suave: #f7b267;
+      --gris-claro: #f5f5f5;
+      --texto: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--gris-claro);
+      color: var(--texto);
+    }
+
+    header {
+      background-color: var(--morado-claro);
+      padding: 20px;
+      text-align: center;
+      color: #3c2a4d;
+    }
+
+    nav {
+      background-color: var(--naranja-suave);
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #4a2e0b;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .info-box {
+      background-color: white;
+      border-left: 6px solid var(--morado-claro);
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .button-container {
+      text-align: right;
+      margin-top: 15px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-size: 0.9rem;
+      margin-left: 10px;
+    }
+
+    .btn-agregar {
+      background-color: var(--morado-claro);
+      color: #3c2a4d;
+    }
+
+    .btn-agregar:hover {
+      background-color: #c2a9e4;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--morado-claro);
+      color: #3c2a4d;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f7b26730;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      height: 25px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      color: white;
+      font-weight: bold;
+      line-height: 25px;
+      padding-left: 10px;
+      border-radius: 20px;
+      transition: width 0.5s ease;
+    }
+
+    footer {
+      background-color: var(--morado-claro);
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      color: #3c2a4d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Clientes</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Historial</a></li>
+      <li><a href="#">Perfil</a></li>
+      <li><a href="http://127.0.0.1:5000/logout">Salir</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="info-box">
+      <h2>Configurar dispositivos IoT</h2>
+      <p>Aquí puedes agregar nuevos dispositivos IoT para gestionar y 
+        monitorear tu red.</p>
+      <div class="button-container">
+        <button class="btn btn-agregar">Agregar dispositivo</button>
+      </div>
+    </section>
+
+        <section class="info-box">
+      <h2>Dispositivos guardados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cámara Seguridad Entrada</td>
+            <td>Cámara Hikivisión series 1 - Value series - DS-2CD1</td>
+            <td>En linea</td>
+          </tr>
+          <tr>
+            <td>L5190 series</td>
+            <td>Impresora IoT HP LaserJet Pro M404dn</td>
+            <td>Requiere mantenimiento</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <section class="info-box">
+      <h2>Registro de peticiones</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID Dispositivo</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Estado</th>
+            <th>Estado de Proceso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1001</td>
+            <td>Cámara Seguridad Entrada</td>
+            <td>Cámara Hikivisión series 1 - Value series - DS-2CD1</td>
+            <td>Vulnerable</td>
+            <td>Solucionado</td>
+          </tr>
+          <tr>
+            <td>1002</td>
+            <td>L5190 series</td>
+            <td>Impresora IoT HP LaserJet Pro M404dn</td>
+            <td>Inactivo</td>
+            <td>En solución</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="info-box">
+      <h2>Estado general de tus reportes</h2>
+
+      <p>En revisión (0%)</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 25%; background-color: #f7b267;">0%</div>
+      </div>
+
+      <p>En solución (1%)</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 50%; background-color: #d8c4f0;">50%</div>
+      </div>
+
+      <p>Solucionado (1%)</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 100%; background-color: #8bc34a;">100%</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; IoT Secure S.A.S. Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

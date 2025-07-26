@@ -1,0 +1,19 @@
+ <nav>
+            
+        {% if session.get('select from IdRoles wher') %}
+        <a href="{{ url_for('muestra') }}">Inicio</a> 
+
+        {% if session['IdRoles'] == 1 %}
+            <a href="{{ url_for('admin') }}">Panel Admin</a>
+        {% elif session['IdRoles'] == 2 %}
+            <a href="{{ url_for('empleados') }}">Panel Empleado</a>
+        {% endif %}
+
+        <a href="{{ url_for('account') }}">Perfil</a>
+        <a href="{{ url_for('logout') }}">Salir</a>
+    {% else %}
+        <a href="{{ url_for('home')}}">Inicio</a>
+        <a href="{{ url_for('register') }}">Registrar</a>
+        <a href="{{ url_for('login') }}">Iniciar Sesión</a>
+    {% endif %}
+        </nav>

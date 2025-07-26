@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empleados</title>
+  <style>
+
+    :root {
+      --morado-claro: #d8c4f0;
+      --naranja-suave: #f7b267;
+      --gris-claro: #f5f5f5;
+      --texto: #333;
+      --rojo-suave:  #db2d2d ;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--gris-claro);
+      color: var(--texto);
+    }
+
+    header {
+      background-color: var(--morado-claro);
+      padding: 20px;
+      text-align: center;
+      color: #3c2a4d;
+    }
+
+    nav {
+      background-color: var(--naranja-suave);
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #4a2e0b;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .info-box {
+      background-color: white;
+      border-left: 6px solid var(--morado-claro);
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .button-container {
+      margin-top: 15px;
+      text-align: right;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-size: 0.9rem;
+    }
+
+    .btn-responder {
+      background-color: var(--morado-claro);
+      color: #3c2a4d;
+    }
+
+    .btn-responder:hover {
+      background-color: #c2a9e4;
+    }
+
+    
+    .btn-ceder {
+      background-color: var(--naranja-suave);
+      color: #4a320b;
+    }
+
+    .btn-comunicar {
+      background-color: var(--rojo-suave);
+      color: #4a320b;
+    }
+
+
+    .btn-ceder:hover {
+      background-color: #e69a4f;
+    }
+
+    footer {
+      background-color: var(--morado-claro);
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      color: #3c2a4d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Soluciones y Producción</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Actividad</a></li>
+      <li><a href="#">Escala mayor</a></li>
+      <li><a href="#">Comunicados</a></li>
+      <li><a href="#">Perfil</a></li>
+      <li><a href="http://127.0.0.1:5000/logout">Salir</a></li>
+    </ul>
+  </nav>
+
+  <main>
+      <h2>Listado activo de peticiones:</h2>
+    <section class="info-box">
+      <h4>PQR - 1: Ataques MIT</h4>
+      <p>El pasado viernes (21 de octubre de 2016), 
+        me di cuenta de que algo raro pasaba con mi Internet.
+        Primero pensé que era el Wi-Fi, porque no podía entrar 
+        a Twitter ni Netflix, y luego Reddit tampoco funcionaba. 
+        Pero lo curioso era que otros sitios sí abrían bien, como Google o YouTube.
+        Mi primera reacción fue reiniciar el router. 
+        Nada cambió. Incluso probé desde el celular usando los datos… <br>
+        Soy una persona muy curiosa y me puse a investigar y encontré que uno de 
+        mis dispositivos, una cámara de seguridad IP que instalé hace meses 
+        estaba enviando una cantidad ridícula de tráfico saliente.
+        y seguía igual. me pueden contactar por correo o llamada gracias.<br><br>
+
+        Nombre: Andres Montoya<br>
+        Email: ejemplo@chos.Netflix <br>
+        Tel : 000 000 000 000<br>
+        dispositivo: Cámara Hikivisión series 1 - Value series - DS-2CD1
+      </p>
+      <div class="button-container">
+        <button class="btn btn-responder">Responder</button>
+        <button class="btn btn-ceder">Escalar</button>
+        <button class="btn btn-comunicar">Comunicar</button>
+      </div>
+    </section>
+
+    <section class="info-box">
+      <h4>PQR - 2: Problema de conexión</h4>
+      <p>
+        Tengo una impresora conectada a la red que de repente dejó 
+        de imprimir documentos importantes y documentos simples los imprimia 
+        sin problema. La impresora marca error de conexión y se reinicia 
+        sola sin razón aparente cuándo se envían los documentos de importancia y
+        al envío de documentos sencillos algunos no los imprimia y otros sí.<br>
+        Esto está afectando los procesos de documentación y gestión empresarial ya
+        que el fallo se encuentra en las 2 impresoras que dispone la empresa. <br>
+        Necesito ayuda lo más pronto posible. Gracias por su pronta atención.<br><br>
+        Nombre: Laura Martínez<br>
+        Tel: 111 222 333 444<br>
+        Dispositivo: Impresora IoT HP LaserJet Pro M404dn
+      </p>
+      <div class="button-container">
+        <button class="btn btn-responder">Responder</button>
+        <button class="btn btn-ceder">Escalar</button>
+        <button class="btn btn-comunicar">Comunicar</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; IoT Secure S.A.S. Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
